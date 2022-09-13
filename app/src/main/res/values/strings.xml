@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Gilded Shrine</string>
+
+    <string name="image_chooser">Choose Image</string>
+    <string name="facebook_app_id">1427842874359525</string>
+    <string name="fb_login_protocol_scheme">fb1427842874359525</string>
+</resources>
