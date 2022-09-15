@@ -30,14 +30,14 @@ class ImageAdapter(private val mContext: Context) : BaseAdapter() {
         return 0
     }
 
-    // create a new ImageView for each item referenced by the Adapter
+
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View? {
         val v = LayoutInflater.from(mContext).inflate(R.layout.grid_element,null)
 
 
         val imageView = v.findViewById<ImageView>(R.id.gridImageview)
         imageView.setImageBitmap(null)
-        // run image related code after the view was laid out
+
         imageView.post {
             object : AsyncTask<Void?, Void?, Void?>() {
                 private var bitmap: Bitmap? = null
@@ -56,7 +56,7 @@ class ImageAdapter(private val mContext: Context) : BaseAdapter() {
     }
 
     private fun getPicFromAsset(imageView: ImageView, assetName: String): Bitmap? {
-        // Get the dimensions of the View
+
         val targetW = imageView.width
         val targetH = imageView.height
         return if (targetW == 0 || targetH == 0) {
@@ -64,18 +64,18 @@ class ImageAdapter(private val mContext: Context) : BaseAdapter() {
             null
         } else try {
             val `is` = am.open("img/$assetName")
-            // Get the dimensions of the bitmap
+
             val bmOptions = BitmapFactory.Options()
             bmOptions.inJustDecodeBounds = true
             BitmapFactory.decodeStream(`is`, Rect(-1, -1, -1, -1), bmOptions)
             val photoW = bmOptions.outWidth
             val photoH = bmOptions.outHeight
 
-            // Determine how much to scale down the image
+
             val scaleFactor = Math.min(photoW / targetW, photoH / targetH)
             `is`.reset()
 
-            // Decode the image file into a Bitmap sized to fill the View
+
             bmOptions.inJustDecodeBounds = false
             bmOptions.inSampleSize = scaleFactor
             bmOptions.inPurgeable = true

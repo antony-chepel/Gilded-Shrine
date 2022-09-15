@@ -8,16 +8,18 @@
     tools:context=".glidedwhite.PuzzleMainScreen">
 
 
+
     <GridView
         android:id="@+id/grid"
         android:layout_margin="8dp"
         android:horizontalSpacing="10dp"
         android:numColumns="3"
+        android:gravity="center"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
         android:verticalSpacing="10dp"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"

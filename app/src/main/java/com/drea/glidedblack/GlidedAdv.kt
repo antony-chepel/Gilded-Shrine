@@ -10,7 +10,7 @@ class GlidedAdv(val context: Context) {
 
     private val jsdoeiwe = AdvertisingIdClient(context.applicationContext)
 
-    suspend fun sacjacac(): String =
+    suspend fun yststdtqwd(): String =
         withContext(Dispatchers.IO) {
             jsdoeiwe.start()
             val adIdInfo = jsdoeiwe.info

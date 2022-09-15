@@ -27,7 +27,7 @@ class GlidedFilt : AppCompatActivity() {
         jsoup = ""
 
         val job = GlobalScope.launch(Dispatchers.IO) {
-            jsoup = jdsjdowiqwe()
+            jsoup = gststdwqdqwd()
             Log.d("jsoup status from global scope", jsoup)
         }
 
@@ -51,7 +51,7 @@ class GlidedFilt : AppCompatActivity() {
 
     }
 
-    private suspend fun jdsjdowiqwe(): String {
+    private suspend fun gststdwqdqwd(): String {
         val hawk: String? = Hawk.get(C1, "null")
         val hawkAppLink: String? = Hawk.get(D1, "null")
         val hawkDevOrNot: String? = Hawk.get(DEV, "false")
@@ -64,17 +64,17 @@ class GlidedFilt : AppCompatActivity() {
         withContext(Dispatchers.IO) {
             //changed logical null to string null
             if (hawk != "null") {
-                hdysdgsdsda(forJsoupSetNaming)
+                oaspooqweqwe(forJsoupSetNaming)
                 Log.d("Check1C", forJsoupSetNaming)
             } else {
-                hdysdgsdsda(forJsoupSetAppLnk)
+                oaspooqweqwe(forJsoupSetAppLnk)
                 Log.d("Check1C", forJsoupSetAppLnk)
             }
         }
         return jsoup
     }
 
-    private fun hdysdgsdsda(link: String) {
+    private fun oaspooqweqwe(link: String) {
         val url = URL(link)
         val urlConnection = url.openConnection() as HttpURLConnection
 

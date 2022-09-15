@@ -25,7 +25,7 @@ class AppClass : Application() {
 
     private suspend fun hdydtwqwqe(context: Context) {
         val advertisingInfo = GlidedAdv(context)
-        val idInfo = advertisingInfo.sacjacac()
+        val idInfo = advertisingInfo.yststdtqwd()
         Hawk.put(MAIN_ID, idInfo)
     }
 }

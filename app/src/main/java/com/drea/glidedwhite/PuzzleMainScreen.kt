@@ -45,7 +45,7 @@ class PuzzleMainScreen : AppCompatActivity() {
         if (intent.resolveActivity(packageManager) != null) {
             var photoFile: File? = null
             try {
-                photoFile = createImageFile()
+                photoFile = ydttsdas()
             } catch (e: IOException) {
                 Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
             }
@@ -62,30 +62,30 @@ class PuzzleMainScreen : AppCompatActivity() {
     }
 
     @Throws(IOException::class)
-    private fun createImageFile(): File? {
+    private fun ydttsdas(): File? {
         if (ContextCompat.checkSelfPermission(
                 this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            // permission not granted, initiate request
+
             ActivityCompat.requestPermissions(
                 this,
                 arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
                 REQUEST_PERMISSION_WRITE_EXTERNAL_STORAGE
             )
         } else {
-            // Create an image file name
+
             val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
             val imageFileName = "JPEG_" + timeStamp + "_"
             val storageDir =
                 Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)
             val image = File.createTempFile(
-                imageFileName,  /* prefix */
-                ".jpg",  /* suffix */
-                storageDir /* directory */
+                imageFileName,
+                ".jpg",
+                storageDir
             )
-            mCurrentPhotoPath = image.absolutePath // save this to use in the intent
+            mCurrentPhotoPath = image.absolutePath
             return image
         }
         return null

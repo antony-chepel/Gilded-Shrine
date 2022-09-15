@@ -29,14 +29,14 @@ class MainActivity : AppCompatActivity() {
             exec.putBoolean("activity_exec", true)
             exec.apply()
         }
-        Log.d("DevChecker", hsysytweqwe(this).toString())
-        Hawk.put(DEV, hsysytweqwe(this).toString())
+        Log.d("DevChecker", tsrwreqweq(this).toString())
+        Hawk.put(DEV, tsrwreqweq(this).toString())
 
-        viewModel.kjsdjfsdf(this)
+        viewModel.xgfsfafdewqe(this)
         AppsFlyerLib.getInstance()
             .init(GLIDECONST.AF_DEV_KEY, viewModel.conversionDataListener, applicationContext)
         AppsFlyerLib.getInstance().start(this)
-        nxhhsasdasd(1500)
+        bxgsdfqwdfqw(1500)
     }
     private fun toTestGrounds() {
         Intent(this, GlidedFilt::class.java)
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun nxhhsasdasd(timeInterval: Long): Job {
+    private fun bxgsdfqwdfqw(timeInterval: Long): Job {
         return CoroutineScope(Dispatchers.IO).launch {
             while (NonCancellable.isActive) {
                 val hawk1: String? = Hawk.get(GLIDECONST.C1)
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    private fun hsysytweqwe(context: Context): Boolean {
+    private fun tsrwreqweq(context: Context): Boolean {
         return run {
             Settings.Secure.getInt(context.contentResolver,
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) != 0
